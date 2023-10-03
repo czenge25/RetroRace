@@ -11,13 +11,12 @@
 		0854ED312AB8ACBD00B80C07 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0854ED302AB8ACBD00B80C07 /* GameScene.sks */; };
 		0854ED332AB8ACBD00B80C07 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0854ED322AB8ACBD00B80C07 /* Actions.sks */; };
 		0854ED352AB8ACBD00B80C07 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854ED342AB8ACBD00B80C07 /* GameScene.swift */; };
-		0854ED372AB8ACBD00B80C07 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854ED362AB8ACBD00B80C07 /* GameViewController.swift */; };
-		0854ED3A2AB8ACBD00B80C07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0854ED382AB8ACBD00B80C07 /* Main.storyboard */; };
 		0854ED3C2AB8ACBE00B80C07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0854ED3B2AB8ACBE00B80C07 /* Assets.xcassets */; };
 		0854ED3F2AB8ACBE00B80C07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0854ED3D2AB8ACBE00B80C07 /* LaunchScreen.storyboard */; };
 		0854ED492AB8ACBE00B80C07 /* RetroRaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854ED482AB8ACBE00B80C07 /* RetroRaceTests.swift */; };
 		0854ED532AB8ACBE00B80C07 /* RetroRaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854ED522AB8ACBE00B80C07 /* RetroRaceUITests.swift */; };
 		0854ED552AB8ACBE00B80C07 /* RetroRaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854ED542AB8ACBE00B80C07 /* RetroRaceUITestsLaunchTests.swift */; };
+		089CD8752ACC8C69004CC233 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089CD8742ACC8C69004CC233 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +42,6 @@
 		0854ED302AB8ACBD00B80C07 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		0854ED322AB8ACBD00B80C07 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		0854ED342AB8ACBD00B80C07 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		0854ED362AB8ACBD00B80C07 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		0854ED392AB8ACBD00B80C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0854ED3B2AB8ACBE00B80C07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0854ED3E2AB8ACBE00B80C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0854ED442AB8ACBE00B80C07 /* RetroRaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetroRaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +49,7 @@
 		0854ED4E2AB8ACBE00B80C07 /* RetroRaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetroRaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0854ED522AB8ACBE00B80C07 /* RetroRaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroRaceUITests.swift; sourceTree = "<group>"; };
 		0854ED542AB8ACBE00B80C07 /* RetroRaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroRaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		089CD8742ACC8C69004CC233 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +104,7 @@
 				0854ED302AB8ACBD00B80C07 /* GameScene.sks */,
 				0854ED322AB8ACBD00B80C07 /* Actions.sks */,
 				0854ED342AB8ACBD00B80C07 /* GameScene.swift */,
-				0854ED362AB8ACBD00B80C07 /* GameViewController.swift */,
-				0854ED382AB8ACBD00B80C07 /* Main.storyboard */,
+				089CD8742ACC8C69004CC233 /* SwiftUIView.swift */,
 				0854ED3B2AB8ACBE00B80C07 /* Assets.xcassets */,
 				0854ED3D2AB8ACBE00B80C07 /* LaunchScreen.storyboard */,
 			);
@@ -235,7 +232,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0854ED3A2AB8ACBD00B80C07 /* Main.storyboard in Resources */,
 				0854ED312AB8ACBD00B80C07 /* GameScene.sks in Resources */,
 				0854ED3C2AB8ACBE00B80C07 /* Assets.xcassets in Resources */,
 				0854ED3F2AB8ACBE00B80C07 /* LaunchScreen.storyboard in Resources */,
@@ -265,7 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0854ED352AB8ACBD00B80C07 /* GameScene.swift in Sources */,
-				0854ED372AB8ACBD00B80C07 /* GameViewController.swift in Sources */,
+				089CD8752ACC8C69004CC233 /* SwiftUIView.swift in Sources */,
 				0854ED2F2AB8ACBD00B80C07 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,14 +299,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0854ED382AB8ACBD00B80C07 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0854ED392AB8ACBD00B80C07 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0854ED3D2AB8ACBE00B80C07 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
