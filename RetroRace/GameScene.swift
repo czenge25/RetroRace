@@ -146,14 +146,7 @@ extension GameScene {
     }
 }
 
-
-
-
-
-
-
-
-// collisions
+// MARK: Collisions
 extension GameScene: SKPhysicsContactDelegate{
     
     struct Collision{
@@ -175,6 +168,6 @@ extension GameScene: SKPhysicsContactDelegate{
             player?.run(die)
         }
     }
-
     
 }
+
