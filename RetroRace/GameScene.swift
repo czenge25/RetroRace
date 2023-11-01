@@ -13,24 +13,26 @@ class GameScene: SKScene {
     // Nodes
     var player : SKNode?
     var joystick : SKNode?
-    var joystickX : SKNode?
-    var joystickY : SKNode?
     var joystickKnob : SKNode?
     
     // Boolean
     var joystickAction = false
     
     // Measure
-    var knobRadius : CGFloat = 50.0
+    var xKnobRadius: CGFloat = 50.0
+    var yKnobRadius: CGFloat = 50.0
+    
+    // Sprite Enginge
+    var previousTimeInterval : TimeInterval = 0
+    var playerIsFacingRight = true
+    var playerSpeedX: Double = 4.0
+    var playerSpeedY: Double = 4.0
     
     // didmove
     override func didMove(to view: SKView) {
-        
-        player = childNode(withName: "car")
-        joystickX = childNode(withName: "arrowX")
-        joystickY = childNode(withName: "arrowY")
+        player = childNode(withName: "car1")
+        joystick = childNode(withName: "joystick")
         joystickKnob = joystick?.childNode(withName: "knob")
-        joystick = joystickKnob;  joystickX; joystickY
     }
 }
 
@@ -56,21 +58,91 @@ extension GameScene {
         // Distance
         for touch in touches {
             let position = touch.location(in: joystick)
-            
-            let length = sqrt(pow(position.y, 2) + pow(position.x, 2))
-            let angle = atan2(position.y, position.x)
-            
-            if knobRadius > length {
+            let xLength = position.x
+            let yLength = position.y
+
+            let length = sqrt(pow(xLength, 2) + pow(yLength, 2))
+
+            if length < xKnobRadius {
                 joystickKnob.position = position
             } else {
-                joystickKnob.position = CGPoint(x: cos(angle) * knobRadius, y: sin(angle) * knobRadius)
+                let angle = atan2(yLength, xLength)
+                let xMovement = cos(angle) * xKnobRadius
+                let yMovement = sin(angle) * yKnobRadius
+                joystickKnob.position = CGPoint(x: xMovement, y: yMovement)
             }
         }
     }
     
     // Touch End
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        for touch in touches {
+            let xJoystickCoordinate = touch.location(in: joystick!).x
+            let xLimit: CGFloat = 200.0
+            if xJoystickCoordinate > -xLimit && xJoystickCoordinate < xLimit {
+                resetKnobPosition()
+            }
+            let yJoystickCoordinate = touch.location(in: joystick!).y
+            let yLimit: CGFloat = 200.0
+            if yJoystickCoordinate > -yLimit && yJoystickCoordinate < yLimit {
+                resetKnobPosition()
+            }
+        }
+    }
+}
+
+// MARK: Action
+extension GameScene {
+    func resetKnobPosition() {
+        let initialPoint = CGPoint(x: 0,y: 0)
+        let moveBack = SKAction.move(to: initialPoint, duration: 0.1)
+        moveBack.timingMode = .linear
+        joystickKnob?.run(moveBack)
+        joystickAction = false
+    }
+}
+
+// MARK: Game Loop
+extension GameScene {
+    override func update(_ currentTime: TimeInterval) {
+    let deltaTime = currentTime - previousTimeInterval
+    previousTimeInterval = currentTime
+    
+    // Player Movement
+    guard let joystickKnob = joystickKnob else { return }
+    let xPosition = Double(joystickKnob.position.x)
+    let yPosition = Double(joystickKnob.position.y)
+    
+    let xDisplacement = CGVector(dx: deltaTime * xPosition * playerSpeedX, dy: 0)
+    let yDisplacement = CGVector(dx: 0, dy: deltaTime * yPosition * playerSpeedY)
+    
+    let moveX = SKAction.move(by: xDisplacement, duration: 0)
+    let moveY = SKAction.move(by: yDisplacement, duration: 0)
+    
+    var faceAction: SKAction
+    
+    if xPosition < 0 {
+        if playerIsFacingRight {
+            playerIsFacingRight = false
+            let faceMovement = SKAction.scaleX(to: -1, duration: 0.0)
+            faceAction = SKAction.sequence([moveX, faceMovement, moveY])
+        } else {
+            faceAction = SKAction.sequence([moveX, moveY])
+        }
+    } else if xPosition > 0 {
+        if !playerIsFacingRight {
+            playerIsFacingRight = true
+            let faceMovement = SKAction.scaleX(to: 1, duration: 0.0)
+            faceAction = SKAction.sequence([moveX, faceMovement, moveY])
+        } else {
+            faceAction = SKAction.sequence([moveX, moveY])
+        }
+    } else {
+        faceAction = moveY
+    }
+    
+    player?.run(faceAction)
+
     }
 }
 
