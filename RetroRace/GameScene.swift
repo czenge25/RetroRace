@@ -30,7 +30,7 @@ class GameScene: SKScene {
         joystickX = childNode(withName: "arrowX")
         joystickY = childNode(withName: "arrowY")
         joystickKnob = joystick?.childNode(withName: "knob")
-        joystick = joystickKnob + joystickX + joystickY
+        joystick = joystickKnob;  joystickX; joystickY
     }
 }
 
@@ -72,4 +72,37 @@ extension GameScene {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
     }
+}
+
+
+
+
+
+
+
+
+// collisions
+extension GameScene: SKPhysicsContactDelegate{
+    
+    struct Collision{
+        enum Masks: Int{
+            case killing, player, reward, ground
+            var bitmask: UInt32{ return 1<<self.rawValue}
+        }
+        let masks: (first: UInt32, second:UInt32)
+        func matches (first: Masks, second: Masks) -> Bool{
+            return (first.bitmask==masks.first && second.bitmask == masks.second) ||
+            (first.bitmask==masks.second && second.bitmask == masks.first)
+        }
+    }
+    func didBegin(_ contact: SKPhysicsContact) {
+        let collision = Collision(masks: (first: contact.bodyA.categoryBitMask, second: contact.bodyB.categoryBitMask))
+        
+        if collision.matches(first: .player, second: .killing) {
+            let die = SKAction.move(to: CGPoint(x: -300, y: -100), duration: 0.0)
+            player?.run(die)
+        }
+    }
+
+    
 }
