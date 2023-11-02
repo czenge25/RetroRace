@@ -30,7 +30,7 @@ class GameScene: SKScene {
     
     // didmove
     override func didMove(to view: SKView) {
-        player = childNode(withName: "car1")
+        player = childNode(withName: "Car1")
         joystick = childNode(withName: "joystick")
         joystickKnob = joystick?.childNode(withName: "knob")
     }
