@@ -18,6 +18,7 @@
 		0854ED552AB8ACBE00B80C07 /* RetroRaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854ED542AB8ACBE00B80C07 /* RetroRaceUITestsLaunchTests.swift */; };
 		089CD8752ACC8C69004CC233 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089CD8742ACC8C69004CC233 /* SwiftUIView.swift */; };
 		08BE96212AE1C8AA00E62376 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BE96202AE1C8AA00E62376 /* GameViewController.swift */; };
+		08D0A3182AFD39F500A839D6 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D0A3172AFD39F500A839D6 /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,19 +40,20 @@
 
 /* Begin PBXFileReference section */
 		0854ED2B2AB8ACBD00B80C07 /* RetroRace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroRace.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0854ED2E2AB8ACBD00B80C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0854ED302AB8ACBD00B80C07 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		0854ED322AB8ACBD00B80C07 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		0854ED342AB8ACBD00B80C07 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		0854ED3B2AB8ACBE00B80C07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0854ED2E2AB8ACBD00B80C07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = RetroRace/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		0854ED302AB8ACBD00B80C07 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = GameScene.sks; path = RetroRace/GameScene.sks; sourceTree = SOURCE_ROOT; };
+		0854ED322AB8ACBD00B80C07 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Actions.sks; path = RetroRace/Actions.sks; sourceTree = SOURCE_ROOT; };
+		0854ED342AB8ACBD00B80C07 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = RetroRace/GameScene.swift; sourceTree = SOURCE_ROOT; };
+		0854ED3B2AB8ACBE00B80C07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = RetroRace/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		0854ED3E2AB8ACBE00B80C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0854ED442AB8ACBE00B80C07 /* RetroRaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetroRaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0854ED482AB8ACBE00B80C07 /* RetroRaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroRaceTests.swift; sourceTree = "<group>"; };
 		0854ED4E2AB8ACBE00B80C07 /* RetroRaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetroRaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0854ED522AB8ACBE00B80C07 /* RetroRaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroRaceUITests.swift; sourceTree = "<group>"; };
 		0854ED542AB8ACBE00B80C07 /* RetroRaceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroRaceUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		089CD8742ACC8C69004CC233 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
-		08BE96202AE1C8AA00E62376 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		089CD8742ACC8C69004CC233 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftUIView.swift; path = RetroRace/SwiftUIView.swift; sourceTree = SOURCE_ROOT; };
+		08BE96202AE1C8AA00E62376 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = RetroRace/GameViewController.swift; sourceTree = SOURCE_ROOT; };
+		08D0A3172AFD39F500A839D6 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Character.swift; path = RetroRace/Character.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				0854ED3B2AB8ACBE00B80C07 /* Assets.xcassets */,
 				0854ED3D2AB8ACBE00B80C07 /* LaunchScreen.storyboard */,
 				08BE96202AE1C8AA00E62376 /* GameViewController.swift */,
+				08D0A3172AFD39F500A839D6 /* Character.swift */,
 			);
 			path = RetroRace;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				08BE96212AE1C8AA00E62376 /* GameViewController.swift in Sources */,
 				0854ED352AB8ACBD00B80C07 /* GameScene.swift in Sources */,
+				08D0A3182AFD39F500A839D6 /* Character.swift in Sources */,
 				089CD8752ACC8C69004CC233 /* SwiftUIView.swift in Sources */,
 				0854ED2F2AB8ACBD00B80C07 /* AppDelegate.swift in Sources */,
 			);
@@ -309,7 +313,8 @@
 				0854ED3E2AB8ACBE00B80C07 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+			path = RetroRace;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 
@@ -440,8 +445,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -467,8 +472,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

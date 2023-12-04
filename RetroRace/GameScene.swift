@@ -22,17 +22,29 @@ class GameScene: SKScene {
     var xKnobRadius: CGFloat = 50.0
     var yKnobRadius: CGFloat = 50.0
     
-    // Sprite Enginge
+    // Sprite Engine
     var previousTimeInterval : TimeInterval = 0
     var playerIsFacingRight = true
-    var playerSpeedX: Double = 4.0
-    var playerSpeedY: Double = 4.0
+    var playerSpeedX: CGFloat = 200.0
+    var playerSpeedY: CGFloat = 200.0
     
+    var needsRotation = false
+    
+    let pi = CGFloat.pi
+
     // didmove
     override func didMove(to view: SKView) {
         player = childNode(withName: "Car1")
         joystick = childNode(withName: "joystick")
         joystickKnob = joystick?.childNode(withName: "knob")
+        
+        // Set up physics for the player
+        player?.physicsBody = SKPhysicsBody(rectangleOf: player!.frame.size)
+        player?.physicsBody?.categoryBitMask = Collision.Masks.player.bitmask
+        player?.physicsBody?.contactTestBitMask = Collision.Masks.killing.bitmask
+        player?.physicsBody?.collisionBitMask = Collision.Masks.ground.bitmask
+        player?.physicsBody?.affectedByGravity = false
+        player?.physicsBody?.allowsRotation = false
     }
 }
 
@@ -94,7 +106,7 @@ extension GameScene {
 // MARK: Action
 extension GameScene {
     func resetKnobPosition() {
-        let initialPoint = CGPoint(x: 0,y: 0)
+        let initialPoint = CGPoint(x: 0, y: 0)
         let moveBack = SKAction.move(to: initialPoint, duration: 0.1)
         moveBack.timingMode = .linear
         joystickKnob?.run(moveBack)
@@ -105,44 +117,57 @@ extension GameScene {
 // MARK: Game Loop
 extension GameScene {
     override func update(_ currentTime: TimeInterval) {
-    let deltaTime = currentTime - previousTimeInterval
-    previousTimeInterval = currentTime
-    
-    // Player Movement
-    guard let joystickKnob = joystickKnob else { return }
-    let xPosition = Double(joystickKnob.position.x)
-    let yPosition = Double(joystickKnob.position.y)
-    
-    let xDisplacement = CGVector(dx: deltaTime * xPosition * playerSpeedX, dy: 0)
-    let yDisplacement = CGVector(dx: 0, dy: deltaTime * yPosition * playerSpeedY)
-    
-    let moveX = SKAction.move(by: xDisplacement, duration: 0)
-    let moveY = SKAction.move(by: yDisplacement, duration: 0)
-    
-    var faceAction: SKAction
-    
-    if xPosition < 0 {
-        if playerIsFacingRight {
-            playerIsFacingRight = false
-            let faceMovement = SKAction.scaleX(to: -1, duration: 0.0)
-            faceAction = SKAction.sequence([moveX, faceMovement, moveY])
-        } else {
-            faceAction = SKAction.sequence([moveX, moveY])
-        }
-    } else if xPosition > 0 {
-        if !playerIsFacingRight {
-            playerIsFacingRight = true
-            let faceMovement = SKAction.scaleX(to: 1, duration: 0.0)
-            faceAction = SKAction.sequence([moveX, faceMovement, moveY])
-        } else {
-            faceAction = SKAction.sequence([moveX, moveY])
-        }
-    } else {
-        faceAction = moveY
-    }
-    
-    player?.run(faceAction)
+        needsRotation = false
+        let deltaTime = currentTime - previousTimeInterval
+        previousTimeInterval = currentTime
+        
+        // Player Movement
+        guard let joystickKnob = joystickKnob else { return }
+        let xPosition = Double(joystickKnob.position.x)
+        let yPosition = Double(joystickKnob.position.y)
+        
+        let xForce = CGFloat(xPosition) * playerSpeedX
+        let yForce = CGFloat(yPosition) * playerSpeedY
+        
+        player?.physicsBody?.applyForce(CGVector(dx: xForce, dy: yForce))
 
+        var rotationAngle = atan2(yPosition, xPosition)
+
+        if (rotationAngle == pi || rotationAngle == -pi) {
+            needsRotation = true
+        }
+
+        if (needsRotation && rotationAngle == -pi) {
+            rotationAngle += pi
+        }
+
+        if (needsRotation && rotationAngle == pi) {
+            rotationAngle -= pi
+        }
+
+        let torque = SKAction.applyTorque(CGFloat(rotationAngle), duration: 0.1)
+        
+        // Group the torque action with other actions as needed
+        let combinedAction = SKAction.group([torque])
+
+        player?.run(combinedAction)
+
+        // Adjusting Facing Direction
+        if xPosition < 0 {
+            if !playerIsFacingRight {
+                // If facing left and turning left, smooth the rotation
+                let faceMovement = SKAction.scaleX(to: 1, duration: 0.1)
+                player?.run(faceMovement)
+                playerIsFacingRight = true
+            }
+        } else if xPosition > 0 {
+            if playerIsFacingRight {
+                // If facing right and turning right, smooth the rotation
+                let faceMovement = SKAction.scaleX(to: -1, duration: 0.1)
+                player?.run(faceMovement)
+                playerIsFacingRight = false
+            }
+        }
     }
 }
 
@@ -170,4 +195,3 @@ extension GameScene: SKPhysicsContactDelegate{
     }
     
 }
-
