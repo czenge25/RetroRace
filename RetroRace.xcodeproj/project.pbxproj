@@ -112,7 +112,7 @@
 				08D0A3172AFD39F500A839D6 /* Character.swift */,
 			);
 			path = RetroRace;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		0854ED472AB8ACBE00B80C07 /* RetroRaceTests */ = {
 			isa = PBXGroup;
