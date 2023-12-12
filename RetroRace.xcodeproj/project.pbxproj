@@ -12,7 +12,6 @@
 		0854ED332AB8ACBD00B80C07 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0854ED322AB8ACBD00B80C07 /* Actions.sks */; };
 		0854ED352AB8ACBD00B80C07 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854ED342AB8ACBD00B80C07 /* GameScene.swift */; };
 		0854ED3C2AB8ACBE00B80C07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0854ED3B2AB8ACBE00B80C07 /* Assets.xcassets */; };
-		0854ED3F2AB8ACBE00B80C07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0854ED3D2AB8ACBE00B80C07 /* LaunchScreen.storyboard */; };
 		0854ED492AB8ACBE00B80C07 /* RetroRaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854ED482AB8ACBE00B80C07 /* RetroRaceTests.swift */; };
 		0854ED532AB8ACBE00B80C07 /* RetroRaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854ED522AB8ACBE00B80C07 /* RetroRaceUITests.swift */; };
 		0854ED552AB8ACBE00B80C07 /* RetroRaceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0854ED542AB8ACBE00B80C07 /* RetroRaceUITestsLaunchTests.swift */; };
@@ -45,7 +44,6 @@
 		0854ED322AB8ACBD00B80C07 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Actions.sks; path = RetroRace/Actions.sks; sourceTree = SOURCE_ROOT; };
 		0854ED342AB8ACBD00B80C07 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = RetroRace/GameScene.swift; sourceTree = SOURCE_ROOT; };
 		0854ED3B2AB8ACBE00B80C07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = RetroRace/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		0854ED3E2AB8ACBE00B80C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0854ED442AB8ACBE00B80C07 /* RetroRaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetroRaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0854ED482AB8ACBE00B80C07 /* RetroRaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetroRaceTests.swift; sourceTree = "<group>"; };
 		0854ED4E2AB8ACBE00B80C07 /* RetroRaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetroRaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +108,6 @@
 				0854ED342AB8ACBD00B80C07 /* GameScene.swift */,
 				089CD8742ACC8C69004CC233 /* SwiftUIView.swift */,
 				0854ED3B2AB8ACBE00B80C07 /* Assets.xcassets */,
-				0854ED3D2AB8ACBE00B80C07 /* LaunchScreen.storyboard */,
 				08BE96202AE1C8AA00E62376 /* GameViewController.swift */,
 				08D0A3172AFD39F500A839D6 /* Character.swift */,
 			);
@@ -240,7 +237,6 @@
 			files = (
 				0854ED312AB8ACBD00B80C07 /* GameScene.sks in Resources */,
 				0854ED3C2AB8ACBE00B80C07 /* Assets.xcassets in Resources */,
-				0854ED3F2AB8ACBE00B80C07 /* LaunchScreen.storyboard in Resources */,
 				0854ED332AB8ACBD00B80C07 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,18 +302,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		0854ED3D2AB8ACBE00B80C07 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0854ED3E2AB8ACBE00B80C07 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			path = RetroRace;
-			sourceTree = SOURCE_ROOT;
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		0854ED562AB8ACBE00B80C07 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -376,6 +360,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -429,6 +414,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
