@@ -14,6 +14,8 @@ class GameScene: SKScene {
     var player : SKNode?
     var joystick : SKNode?
     var joystickKnob : SKNode?
+    
+    var background : SKNode?
 
     var sceneCamera : SKCameraNode = SKCameraNode()
     
@@ -35,8 +37,21 @@ class GameScene: SKScene {
     // didmove
     override func didMove(to view: SKView) {
         player = childNode(withName: "Car1")
+        
         joystick = childNode(withName: "joystick")
         joystickKnob = joystick?.childNode(withName: "knob")
+        
+        let count = 0...5;
+        
+        for i in count {
+            background = SKSpriteNode(imageNamed: "Road1")
+            background?.yScale = 0.25
+            background?.xScale = 1.75
+            background?.zPosition = 1
+            background?.position.x = CGFloat(896 * i)
+            background?.position.y = 0
+            addChild(background!)
+        }
         
         camera = sceneCamera
         
@@ -134,9 +149,9 @@ extension GameScene {
         let xPosition = Double(joystickKnob.position.x)
         let yPosition = Double(joystickKnob.position.y)
         
-        let maxSpeed: CGFloat = 200.0
-        let acceleration: CGFloat = 1.5
-        let damping: CGFloat = 0.95
+        let maxSpeed: CGFloat = 350.0
+        let acceleration: CGFloat = 2
+        let damping: CGFloat = 0.98
         
         if (joystickAction) {
             // Calculate force components and apply force to the player's physics body
