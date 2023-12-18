@@ -15,7 +15,8 @@ class GameScene: SKScene {
     var joystick : SKNode?
     var joystickKnob : SKNode?
     
-    var background : SKNode?
+    var sceneName : String?
+    var mp : MapBuilder?
 
     var sceneCamera : SKCameraNode = SKCameraNode()
     
@@ -41,18 +42,6 @@ class GameScene: SKScene {
         joystick = childNode(withName: "joystick")
         joystickKnob = joystick?.childNode(withName: "knob")
         
-        let count = 0...5;
-        
-        for i in count {
-            background = SKSpriteNode(imageNamed: "Road1")
-            background?.yScale = 0.25
-            background?.xScale = 1.75
-            background?.zPosition = 1
-            background?.position.x = CGFloat(896 * i)
-            background?.position.y = 0
-            addChild(background!)
-        }
-        
         camera = sceneCamera
         
         // Set up physics for the player
@@ -62,6 +51,44 @@ class GameScene: SKScene {
         
         player?.position = CGPoint(x: 0, y: 0)
         
+        mp = MapBuilder(scene: "Tutorial")
+        sceneName = mp?.scene
+        
+        if (sceneName == "Tutorial") {
+            var count = 0...5;
+            
+            for i in count {
+                let roadTile = SKSpriteNode(imageNamed: "Road_01_Tile_03")
+                roadTile.yScale = 0.25
+                roadTile.xScale = 1.75
+                roadTile.zPosition = 1
+                roadTile.position.x = CGFloat(896 * i)
+                roadTile.position.y = 0
+                addChild(roadTile)
+                
+            }
+            
+            count = 0...15
+            var numbers = 0...25
+            for i in numbers {
+                for j in count {
+                    let grassTile = SKSpriteNode(imageNamed: "Grass_Tile")
+                    grassTile.yScale = 0.5
+                    grassTile.xScale = 0.5
+                    grassTile.zPosition = 0
+                    grassTile.position.x = CGFloat(256 * i) - 1280
+                    grassTile.position.y = CGFloat(256 * j) - 2560
+                    addChild(grassTile)
+                }
+            }
+            
+        } else if (sceneName == "Level1") {
+            
+        } else if (sceneName == "Level2") {
+            
+        } else {
+            
+        }
     }
 }
 
