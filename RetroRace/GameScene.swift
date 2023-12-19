@@ -1,32 +1,30 @@
-//
-//  GameScene.swift
-//  RetroRace
-//
-//  Created by Cameron Zenge on 9/18/23.
-//
+// GameScene.swift
+// RetroRace
+// Created by Cameron Zenge on 9/18/23.
 
 import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
     
-    // Nodes
+    // Player and joystick vars
     var player : SKNode?
     var joystick : SKNode?
     var joystickKnob : SKNode?
     
+    // Brake vars
     var brakeButton: SKSpriteNode?
     var isBraking = false
     
+    // MapBuilder vars
     var sceneName : String?
     var mp : MapBuilder?
 
+    // Camera var
     var sceneCamera : SKCameraNode = SKCameraNode()
     
-
+    // Joystick variables
     var joystickAction = false
-    
-
     var xKnobRadius: CGFloat = 50.0
     var yKnobRadius: CGFloat = 50.0
     
@@ -36,6 +34,7 @@ class GameScene: SKScene {
     var playerSpeedX: CGFloat = 1.0
     var playerSpeedY: CGFloat = 1.0
     
+    // Pi constant
     let pi = CGFloat.pi
 
     // didMove
@@ -45,15 +44,15 @@ class GameScene: SKScene {
         joystick = childNode(withName: "joystick")
         joystickKnob = joystick?.childNode(withName: "knob")
         
+        // Create brake button as SKSpriteNode
         let brakeButtonTexture = SKTexture(imageNamed: "BrakeButton")
         brakeButton = SKSpriteNode(texture: brakeButtonTexture)
-        brakeButton?.scale(to: CGSize(width: 100,height: 300))
+        brakeButton?.scale(to: CGSize(width: 100, height: 300))
         brakeButton?.name = "brakeButton"
         brakeButton?.zPosition = 2
         
         addChild(brakeButton!)
 
-        
         camera = sceneCamera
         
         // Set up physics for the player
@@ -63,14 +62,13 @@ class GameScene: SKScene {
         
         player?.position = CGPoint(x: 0, y: 0)
         
-//MARK: Map Selection
-        
+// MARK: Map Selection
         mp = MapBuilder(scene: "Tutorial")
         sceneName = mp?.scene
         
         if (sceneName == "Tutorial") {
+            // Creating road tiles
             var count = 0...5;
-            
             for i in count {
                 let roadTile = SKSpriteNode(imageNamed: "Road_01_Tile_03")
                 roadTile.yScale = 0.25
@@ -79,9 +77,9 @@ class GameScene: SKScene {
                 roadTile.position.x = CGFloat(896 * i)
                 roadTile.position.y = 0
                 addChild(roadTile)
-                
             }
             
+            // Creating grass tiles
             count = 0...15
             var numbers = 0...25
             for i in numbers {
@@ -97,11 +95,11 @@ class GameScene: SKScene {
             }
             
         } else if (sceneName == "Level1") {
-            
+            // Code for Level1
         } else if (sceneName == "Level2") {
-            
+            // Code for Level2
         } else {
-            
+            // Code for other scenes
         }
     }
 }
@@ -111,10 +109,12 @@ extension GameScene {
     // Touch Began
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
+            // Check if the touch is on the brakeButton
             if let brakeButton = brakeButton {
                 let location = touch.location(in: self)
                 isBraking = brakeButton.frame.contains(location)
             }
+            // Check if the touch is on the joystickKnob
             if let joystickKnob = joystickKnob {
                 let location = touch.location(in: joystick!)
                 joystickAction = joystickKnob.frame.contains(location)
@@ -129,7 +129,7 @@ extension GameScene {
         
         if !joystickAction { return }
         
-        // Distance
+        // Move the joystick knob based on touch distance
         for touch in touches {
             let position = touch.location(in: joystick)
             let xLength = position.x
@@ -152,6 +152,7 @@ extension GameScene {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         isBraking = false
         for touch in touches {
+            // Check joystick coordinates and reset knob position if necessary
             let xJoystickCoordinate = touch.location(in: joystick!).x
             let xLimit: CGFloat = 200.0
             if xJoystickCoordinate > -xLimit && xJoystickCoordinate < xLimit {
@@ -166,8 +167,8 @@ extension GameScene {
     }
 }
 
-// MARK: Action
 extension GameScene {
+    // Reset joystick knob position
     func resetKnobPosition() {
         let initialPoint = CGPoint(x: 0, y: 0)
         let moveBack = SKAction.move(to: initialPoint, duration: 0.1)
@@ -179,11 +180,13 @@ extension GameScene {
 
 // MARK: Game Loop
 extension GameScene {
+    // Game loop for player movement and actions
     override func update(_ currentTime: TimeInterval) {
+        // Update camera position based on player position
+        camera?.position.x = player?.position.x ?? 0
+        camera?.position.y = player?.position.y ?? 0
         
-        camera?.position.x = player?.position.x ?? 0;
-        camera?.position.y = player?.position.y ?? 0;
-        
+        // Update joystick position based on camera position
         joystick?.position.x = (camera?.position.x ?? 0) - 300
         joystick?.position.y = (camera?.position.y ?? 0) - 100
         
@@ -241,6 +244,9 @@ extension GameScene {
 }
 
 // MARK: Collisions
+
+// *Not currently properly functional*
+
 /*
 extension GameScene: SKPhysicsContactDelegate{
     
