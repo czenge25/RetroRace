@@ -15,15 +15,18 @@ class GameScene: SKScene {
     var joystick : SKNode?
     var joystickKnob : SKNode?
     
+    var brakeButton: SKSpriteNode?
+    var isBraking = false
+    
     var sceneName : String?
     var mp : MapBuilder?
 
     var sceneCamera : SKCameraNode = SKCameraNode()
     
-    // Boolean
+
     var joystickAction = false
     
-    // Measure
+
     var xKnobRadius: CGFloat = 50.0
     var yKnobRadius: CGFloat = 50.0
     
@@ -35,12 +38,21 @@ class GameScene: SKScene {
     
     let pi = CGFloat.pi
 
-    // didmove
+    // didMove
     override func didMove(to view: SKView) {
         player = childNode(withName: "Car1")
         
         joystick = childNode(withName: "joystick")
         joystickKnob = joystick?.childNode(withName: "knob")
+        
+        let brakeButtonTexture = SKTexture(imageNamed: "BrakeButton")
+        brakeButton = SKSpriteNode(texture: brakeButtonTexture)
+        brakeButton?.scale(to: CGSize(width: 100,height: 300))
+        brakeButton?.name = "brakeButton"
+        brakeButton?.zPosition = 2
+        
+        addChild(brakeButton!)
+
         
         camera = sceneCamera
         
@@ -50,6 +62,8 @@ class GameScene: SKScene {
         self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         
         player?.position = CGPoint(x: 0, y: 0)
+        
+//MARK: Map Selection
         
         mp = MapBuilder(scene: "Tutorial")
         sceneName = mp?.scene
@@ -97,6 +111,10 @@ extension GameScene {
     // Touch Began
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
+            if let brakeButton = brakeButton {
+                let location = touch.location(in: self)
+                isBraking = brakeButton.frame.contains(location)
+            }
             if let joystickKnob = joystickKnob {
                 let location = touch.location(in: joystick!)
                 joystickAction = joystickKnob.frame.contains(location)
@@ -132,6 +150,7 @@ extension GameScene {
     
     // Touch End
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        isBraking = false
         for touch in touches {
             let xJoystickCoordinate = touch.location(in: joystick!).x
             let xLimit: CGFloat = 200.0
@@ -176,9 +195,25 @@ extension GameScene {
         let xPosition = Double(joystickKnob.position.x)
         let yPosition = Double(joystickKnob.position.y)
         
+        brakeButton?.position.x = (player?.position.x ?? 0) + 300
+        brakeButton?.position.y = (player?.position.y ?? 0) - 175
+        
         let maxSpeed: CGFloat = 350.0
         let acceleration: CGFloat = 2
-        let damping: CGFloat = 0.98
+        let damping: CGFloat = 0.995
+        
+        if isBraking {
+            // Apply braking force
+            let brakeFriction: CGFloat = 0.98
+            
+            player?.physicsBody?.velocity.dx *= brakeFriction
+            player?.physicsBody?.velocity.dy *= brakeFriction
+            
+            if (abs(player?.physicsBody?.velocity.dx ?? 0) < 5.0 && abs(player?.physicsBody?.velocity.dy ?? 0) < 5.0) {
+                player?.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+                isBraking = false
+            }
+        }
         
         if (joystickAction) {
             // Calculate force components and apply force to the player's physics body
