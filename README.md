@@ -58,5 +58,12 @@ To install and run the RetroRace game:
 2. Clone this repository to your local machine.
 3. Open the RetroRace project in Xcode.
 5. Build and run the project using the Xcode simulator or connect a physical device.
-Known Issues
+
+**Known Issues**
 Currently, there is an Xcode Simulator bug that may not allow other people to properly run the Simulator and run the game on their device. The solution to this problem is not currently known, but will be updated as it is found.
+
+**Unimplemented Features**
+Objectives: Levels, finish lines, and scoring. 
+Customizables: Cosmetics, an item shop, and car upgrades.
+Gameplay: Pit stops, gas, coins, limited time modes.
+Sound design: Music, sound effects.
