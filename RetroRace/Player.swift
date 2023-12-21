@@ -1,9 +1,7 @@
-//
-//  Player.swift
-//  RetroRace
-//
-//  Created by Cameron Zenge on 11/9/23.
-//
+/*
+CZ, HK
+12/21/23
+ */
 
 import SpriteKit
 
