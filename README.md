@@ -1,6 +1,9 @@
 ***RetroRace***
 
 **Overview**
+
+RetroRace is an in-progress 2D top-down racing game developed for iOS devices. 
+
 This repository contains Swift files for the RetroRace game, created by Cameron Zenge and Hugh Karmozyn. The main files are:
 
 GameScene.swift: Implements the main gameplay scene using the SpriteKit framework.
