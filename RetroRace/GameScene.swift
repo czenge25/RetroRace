@@ -1,6 +1,7 @@
-// GameScene.swift
-// RetroRace
-// Created by Cameron Zenge on 9/18/23.
+/*
+CZ, HK
+12/21/23
+ */
 
 import SpriteKit
 import GameplayKit
