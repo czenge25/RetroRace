@@ -1,9 +1,7 @@
-//
-//  MapBuilder.swift
-//  RetroRace
-//
-//  Created by Cameron Zenge on 12/13/23.
-//
+/*
+CZ, HK
+12/21/23
+ */
 
 import Foundation
 import SpriteKit
