@@ -1,9 +1,7 @@
-//
-//  GameViewController.swift
-//  RetroRace
-//
-//  Created by Cameron Zenge on 10/19/23.
-//
+/*
+CZ, HK
+12/21/23
+ */
 
 import UIKit
 import SpriteKit
