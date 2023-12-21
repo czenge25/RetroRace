@@ -1,9 +1,7 @@
-//
-//  SwiftUIView.swift
-//  RetroRace
-//
-//  Created by Cameron Zenge on 10/3/23.
-//
+/*
+CZ, HK
+12/21/23
+ */
 
 import SwiftUI
 
