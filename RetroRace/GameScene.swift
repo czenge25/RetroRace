@@ -20,6 +20,7 @@ class GameScene: SKScene {
     // MapBuilder vars
     var sceneName : String?
     var mp : MapBuilder?
+    var grassTileArray: [SKSpriteNode] = []
 
     // Camera var
     var sceneCamera : SKCameraNode = SKCameraNode()
@@ -86,6 +87,7 @@ class GameScene: SKScene {
             for i in numbers {
                 for j in count {
                     let grassTile = SKSpriteNode(imageNamed: "Grass_Tile")
+                    grassTileArray.append(grassTile)
                     grassTile.yScale = 0.5
                     grassTile.xScale = 0.5
                     grassTile.zPosition = 0
@@ -204,7 +206,26 @@ extension GameScene {
         
         let maxSpeed: CGFloat = 350.0
         let acceleration: CGFloat = 2
-        let damping: CGFloat = 0.995
+        var friction: CGFloat = 0.995
+        var isTouchingGrass = false
+        
+        
+        
+        for grassTileArray in self.grassTileArray {
+            if player?.frame.intersects(grassTileArray.frame) ?? false {
+                // Change the variable based on the collision
+                isTouchingGrass = true
+                break;
+            } else {
+                isTouchingGrass = false
+            }
+        }
+                
+        if isTouchingGrass {
+                friction = 0.5
+            } else {
+                friction = 0.9
+            }
         
         if isBraking {
             // Apply braking force
@@ -221,8 +242,8 @@ extension GameScene {
         
         if (joystickAction) {
             // Calculate force components and apply force to the player's physics body
-            let xForce = CGFloat(xPosition) * playerSpeedX * deltaTime
-            let yForce = CGFloat(yPosition) * playerSpeedY * deltaTime
+            let xForce = CGFloat(xPosition) * playerSpeedX * deltaTime * friction
+            let yForce = CGFloat(yPosition) * playerSpeedY * deltaTime * friction
             
             player?.physicsBody?.applyForce(CGVector(dx: xForce, dy: yForce))
             
@@ -233,9 +254,9 @@ extension GameScene {
             
             player?.zRotation = angle
         } else {
-            // Apply damping to gradually reduce velocity when there's no input
-            player?.physicsBody?.velocity.dx *= damping
-            player?.physicsBody?.velocity.dy *= damping
+            // Apply friction to gradually reduce velocity when there's no input
+            player?.physicsBody?.velocity.dx *= friction
+            player?.physicsBody?.velocity.dy *= friction
         }
         
         print("Player Position: \(player?.position ?? .zero)")
