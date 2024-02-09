@@ -1,0 +1,78 @@
+{
+  "" : {
+    "diagnostics" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/RetroRace-master.dia",
+    "emit-module-dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/RetroRace-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/RetroRace-master-emit-module.dia",
+    "swift-dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/RetroRace-master.swiftdeps"
+  },
+  "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/AppDelegate.swift" : {
+    "const-values" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/AppDelegate.swiftconstvalues",
+    "dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/AppDelegate.d",
+    "diagnostics" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/AppDelegate.dia",
+    "index-unit-output-path" : "/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/AppDelegate.o",
+    "swift-dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/AppDelegate.swiftdeps",
+    "swiftmodule" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/AppDelegate~partial.swiftmodule"
+  },
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/GameScene.swift" : {
+    "const-values" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameScene.swiftconstvalues",
+    "dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameScene.d",
+    "diagnostics" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameScene.dia",
+    "index-unit-output-path" : "/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameScene.o",
+    "llvm-bc" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameScene.bc",
+    "object" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameScene.o",
+    "swift-dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameScene.swiftdeps",
+    "swiftmodule" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameScene~partial.swiftmodule"
+  },
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/GameViewController.swift" : {
+    "const-values" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameViewController.swiftconstvalues",
+    "dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameViewController.d",
+    "diagnostics" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameViewController.dia",
+    "index-unit-output-path" : "/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameViewController.o",
+    "llvm-bc" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameViewController.bc",
+    "object" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameViewController.o",
+    "swift-dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameViewController.swiftdeps",
+    "swiftmodule" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/GameViewController~partial.swiftmodule"
+  },
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/MapBuilder.swift" : {
+    "const-values" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/MapBuilder.swiftconstvalues",
+    "dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/MapBuilder.d",
+    "diagnostics" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/MapBuilder.dia",
+    "index-unit-output-path" : "/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/MapBuilder.o",
+    "llvm-bc" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/MapBuilder.bc",
+    "object" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/MapBuilder.o",
+    "swift-dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/MapBuilder.swiftdeps",
+    "swiftmodule" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/MapBuilder~partial.swiftmodule"
+  },
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/Player.swift" : {
+    "const-values" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/Player.swiftconstvalues",
+    "dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/Player.d",
+    "diagnostics" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/Player.dia",
+    "index-unit-output-path" : "/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/Player.o",
+    "llvm-bc" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/Player.bc",
+    "object" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/Player.o",
+    "swift-dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/Player.swiftdeps",
+    "swiftmodule" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/Player~partial.swiftmodule"
+  },
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/SwiftUIView.swift" : {
+    "const-values" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/SwiftUIView.swiftconstvalues",
+    "dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/SwiftUIView.d",
+    "diagnostics" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/SwiftUIView.dia",
+    "index-unit-output-path" : "/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/SwiftUIView.o",
+    "llvm-bc" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/SwiftUIView.bc",
+    "object" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/SwiftUIView.o",
+    "swift-dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/SwiftUIView.swiftdeps",
+    "swiftmodule" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/Objects-normal/arm64/SwiftUIView~partial.swiftmodule"
+  }
+}

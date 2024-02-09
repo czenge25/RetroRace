@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>09DC0C75-2A7D-499F-A6BE-C819162E56D9</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>09DC0C75-2A7D-499F-A6BE-C819162E56D9.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>46</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>RetroRace project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>RetroRace</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build RetroRace</string>
+			<key>timeStartedRecording</key>
+			<real>729197871.40899801</real>
+			<key>timeStoppedRecording</key>
+			<real>729197879.89871895</real>
+			<key>title</key>
+			<string>Build RetroRace</string>
+			<key>uniqueIdentifier</key>
+			<string>09DC0C75-2A7D-499F-A6BE-C819162E56D9</string>
+		</dict>
+		<key>1AA028C0-63A6-4009-8FE7-20423879D5C8</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>1AA028C0-63A6-4009-8FE7-20423879D5C8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>46</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>RetroRace project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>RetroRace</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build RetroRace</string>
+			<key>timeStartedRecording</key>
+			<real>729101084.53112197</real>
+			<key>timeStoppedRecording</key>
+			<real>729101086.14898705</real>
+			<key>title</key>
+			<string>Build RetroRace</string>
+			<key>uniqueIdentifier</key>
+			<string>1AA028C0-63A6-4009-8FE7-20423879D5C8</string>
+		</dict>
+		<key>CC2AADBA-AA50-4E3B-9AD7-1281918E36B3</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>CC2AADBA-AA50-4E3B-9AD7-1281918E36B3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>46</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>RetroRace project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>RetroRace</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build RetroRace</string>
+			<key>timeStartedRecording</key>
+			<real>729197694.60836601</real>
+			<key>timeStoppedRecording</key>
+			<real>729197699.13677502</real>
+			<key>title</key>
+			<string>Build RetroRace</string>
+			<key>uniqueIdentifier</key>
+			<string>CC2AADBA-AA50-4E3B-9AD7-1281918E36B3</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
