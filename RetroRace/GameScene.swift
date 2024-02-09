@@ -16,11 +16,22 @@ class GameScene: SKScene {
     // Brake vars
     var brakeButton: SKSpriteNode?
     var isBraking = false
+    var isTouchingRoad = true
+    
+    var maxSpeed: CGFloat = 600.0
+    var grassMaxSpeed: CGFloat?
+    var currentMaxSpeed: CGFloat?
+    
+    var acceleration: CGFloat = 4
+    var grassAcceleration: CGFloat?
+    var currentAcceleration: CGFloat?
+    
+    var friction: CGFloat = 0.995
     
     // MapBuilder vars
     var sceneName : String?
     var mp : MapBuilder?
-    var grassTileArray: [SKSpriteNode] = []
+    var roadTileArray: [SKSpriteNode] = []
 
     // Camera var
     var sceneCamera : SKCameraNode = SKCameraNode()
@@ -41,6 +52,10 @@ class GameScene: SKScene {
 
     // didMove
     override func didMove(to view: SKView) {
+        
+        grassMaxSpeed = maxSpeed * (3/5)
+        grassAcceleration = acceleration * (0.3/0.7)
+        
         player = childNode(withName: "Car1")
         
         joystick = childNode(withName: "joystick")
@@ -70,9 +85,10 @@ class GameScene: SKScene {
         
         if (sceneName == "Tutorial") {
             // Creating road tiles
-            var count = 0...5;
+            var count = 0...5
             for i in count {
                 let roadTile = SKSpriteNode(imageNamed: "Road_01_Tile_03")
+                roadTileArray.append(roadTile)
                 roadTile.yScale = 0.25
                 roadTile.xScale = 1.75
                 roadTile.zPosition = 1
@@ -87,7 +103,6 @@ class GameScene: SKScene {
             for i in numbers {
                 for j in count {
                     let grassTile = SKSpriteNode(imageNamed: "Grass_Tile")
-                    grassTileArray.append(grassTile)
                     grassTile.yScale = 0.5
                     grassTile.xScale = 0.5
                     grassTile.zPosition = 0
@@ -204,27 +219,24 @@ extension GameScene {
         brakeButton?.position.x = (player?.position.x ?? 0) + 300
         brakeButton?.position.y = (player?.position.y ?? 0) - 175
         
-        let maxSpeed: CGFloat = 350.0
-        let acceleration: CGFloat = 2
-        var friction: CGFloat = 0.995
-        var isTouchingGrass = false
-        
-        
-        
-        for grassTileArray in self.grassTileArray {
-            if player?.frame.intersects(grassTileArray.frame) ?? false {
+        for roadTileArray in self.roadTileArray {
+            if player?.frame.intersects(roadTileArray.frame) ?? false {
                 // Change the variable based on the collision
-                isTouchingGrass = true
+                isTouchingRoad = true
                 break;
             } else {
-                isTouchingGrass = false
+                isTouchingRoad = false
             }
         }
                 
-        if isTouchingGrass {
-                friction = 0.5
+        if isTouchingRoad {
+                friction = 0.7
+                currentAcceleration = acceleration
+            currentMaxSpeed = maxSpeed
             } else {
-                friction = 0.9
+                friction = 0.3
+                currentMaxSpeed = grassMaxSpeed
+                currentAcceleration = grassAcceleration
             }
         
         if isBraking {
@@ -242,26 +254,55 @@ extension GameScene {
         
         if (joystickAction) {
             // Calculate force components and apply force to the player's physics body
-            let xForce = CGFloat(xPosition) * playerSpeedX * deltaTime * friction
-            let yForce = CGFloat(yPosition) * playerSpeedY * deltaTime * friction
+            let xForce = CGFloat(xPosition) * playerSpeedX * deltaTime
+            let yForce = CGFloat(yPosition) * playerSpeedY * deltaTime
+            
+            /*
             
             player?.physicsBody?.applyForce(CGVector(dx: xForce, dy: yForce))
             
             player?.physicsBody?.velocity.dx = max(min((player?.physicsBody?.velocity.dx ?? 0) + xForce * acceleration, maxSpeed), -maxSpeed)
             player?.physicsBody?.velocity.dy = max(min((player?.physicsBody?.velocity.dy ?? 0) + yForce * acceleration, maxSpeed), -maxSpeed)
+             
+             */
             
             let angle = atan2(yForce, xForce)
+            
+            // Apply the force in the direction of the joystick
+            let impulse = CGVector(dx: xForce, dy: yForce)
+            player?.physicsBody?.applyImpulse(impulse)
+            
+            // Limit the player's speed
+            let speed = sqrt(pow(player?.physicsBody?.velocity.dx ?? 0, 2) + pow(player?.physicsBody?.velocity.dy ?? 0, 2))
+            if speed > currentMaxSpeed ?? 0 {
+                player?.physicsBody?.velocity.dx *= (currentMaxSpeed ?? 0) / speed
+                player?.physicsBody?.velocity.dy *= (currentMaxSpeed ?? 0) / speed
+            }
             
             player?.zRotation = angle
         } else {
             // Apply friction to gradually reduce velocity when there's no input
             player?.physicsBody?.velocity.dx *= friction
             player?.physicsBody?.velocity.dy *= friction
+            
+            let velocity = physicsBody?.velocity
+
+            player?.physicsBody?.velocity.dx = 0.0
+            player?.physicsBody?.velocity.dy = 0.0
+        }
+        
+        if let playerPhysicsBody = player?.physicsBody {
+            let speed = abs(hypot(playerPhysicsBody.velocity.dx, playerPhysicsBody.velocity.dy))
+            if speed > currentMaxSpeed ?? 0 {
+                playerPhysicsBody.velocity.dx *= ((currentMaxSpeed ?? 0)/speed)
+                playerPhysicsBody.velocity.dy *= ((currentMaxSpeed ?? 0)/speed)
+            }
         }
         
         print("Player Position: \(player?.position ?? .zero)")
         print("Player Is Hidden: \(player?.isHidden ?? true)")
         print("Joystick Action: \(joystickAction)")
+        print(isTouchingRoad)
     }
 }
 

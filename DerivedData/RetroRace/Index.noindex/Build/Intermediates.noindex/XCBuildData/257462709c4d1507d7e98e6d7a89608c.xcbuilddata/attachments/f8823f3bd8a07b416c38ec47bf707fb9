@@ -1,0 +1,12 @@
+{
+  "" : {
+    "dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Index.noindex/Build/Intermediates.noindex/RetroRace.build/Debug-maccatalyst/RetroRaceTests.build/Objects-normal/arm64/RetroRaceTests-master.d",
+    "diagnostics" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Index.noindex/Build/Intermediates.noindex/RetroRace.build/Debug-maccatalyst/RetroRaceTests.build/Objects-normal/arm64/RetroRaceTests-master.dia",
+    "emit-module-dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Index.noindex/Build/Intermediates.noindex/RetroRace.build/Debug-maccatalyst/RetroRaceTests.build/Objects-normal/arm64/RetroRaceTests-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Index.noindex/Build/Intermediates.noindex/RetroRace.build/Debug-maccatalyst/RetroRaceTests.build/Objects-normal/arm64/RetroRaceTests-master-emit-module.dia",
+    "swift-dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Index.noindex/Build/Intermediates.noindex/RetroRace.build/Debug-maccatalyst/RetroRaceTests.build/Objects-normal/arm64/RetroRaceTests-master.swiftdeps"
+  },
+  "/Users/czenge25/Desktop/RetroRace/RetroRaceTests/RetroRaceTests.swift" : {
+
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "" : {
+    "dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Index.noindex/Build/Intermediates.noindex/RetroRace.build/Debug-iphoneos/RetroRace.build/Objects-normal/arm64/RetroRace-master.d",
+    "diagnostics" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Index.noindex/Build/Intermediates.noindex/RetroRace.build/Debug-iphoneos/RetroRace.build/Objects-normal/arm64/RetroRace-master.dia",
+    "emit-module-dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Index.noindex/Build/Intermediates.noindex/RetroRace.build/Debug-iphoneos/RetroRace.build/Objects-normal/arm64/RetroRace-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Index.noindex/Build/Intermediates.noindex/RetroRace.build/Debug-iphoneos/RetroRace.build/Objects-normal/arm64/RetroRace-master-emit-module.dia",
+    "swift-dependencies" : "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Index.noindex/Build/Intermediates.noindex/RetroRace.build/Debug-iphoneos/RetroRace.build/Objects-normal/arm64/RetroRace-master.swiftdeps"
+  },
+  "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Index.noindex/Build/Intermediates.noindex/RetroRace.build/Debug-iphoneos/RetroRace.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+
+  },
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/AppDelegate.swift" : {
+
+  },
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/GameScene.swift" : {
+
+  },
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/GameViewController.swift" : {
+
+  },
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/MapBuilder.swift" : {
+
+  },
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/Player.swift" : {
+
+  },
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/SwiftUIView.swift" : {
+
+  }
+}

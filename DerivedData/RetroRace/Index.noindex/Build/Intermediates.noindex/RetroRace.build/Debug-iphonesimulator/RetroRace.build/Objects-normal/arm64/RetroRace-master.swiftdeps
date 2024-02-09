@@ -1,0 +1,13 @@
+version: "Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)"
+options: "4b83cb4138126be2a7e7ec3e2680d4d260d1c604089312834df1a2cb70de7aa9"
+build_start_time: [1707504959, 949215000]
+build_end_time: [1707504960, 722000]
+inputs:
+  ? "/Users/czenge25/Desktop/RetroRace/DerivedData/RetroRace/Index.noindex/Build/Intermediates.noindex/RetroRace.build/Debug-iphonesimulator/RetroRace.build/DerivedSources/GeneratedAssetSymbols.swift"
+  : !dirty [1707504959, 443016873]
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/AppDelegate.swift": !dirty [1703185661, 42969411]
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/GameScene.swift": !dirty [1707504894, 586311944]
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/GameViewController.swift": !dirty [1703185661, 43775527]
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/MapBuilder.swift": !dirty [1703185661, 44097399]
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/Player.swift": !dirty [1703185661, 44453353]
+  "/Users/czenge25/Desktop/RetroRace/RetroRace/SwiftUIView.swift": !dirty [1703185661, 45833963]
